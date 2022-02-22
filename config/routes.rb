@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+    get 'user/:id', to: 'pages#profile', as: :profile
     get 'user/:id/venues', to: 'pages#venues', as: :my_venues
   root to: 'pages#home'
   resources :venues do
