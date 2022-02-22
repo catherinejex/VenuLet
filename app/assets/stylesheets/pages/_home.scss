@@ -28,17 +28,6 @@ h1 {
   text-shadow: 2px 2px 3px black;
 }
 
-p {
-  font-size: 20px;
-  font-weight: 300;
-  font-style: italic;
-  text-align: center;
-  color: white;
-  margin: 0;
-  font-family: 'Noto Serif Display', serif;
-  text-shadow: 2px 2px 3px black;
-}
-
 .heading {
   position: absolute;
   padding-left: 400px;
@@ -90,5 +79,12 @@ h3 {
  }
 
  #second {
+   text-shadow: 2px 2px 3px black;
    font-size: 35px;
+   font-weight: 300;
+   font-style: italic;
+   text-align: center;
+   color: white;
+   margin: 0;
+   font-family: 'Noto Serif Display', serif;
  }
