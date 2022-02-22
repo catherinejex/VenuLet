@@ -6,7 +6,6 @@
 
 #banner {
   background-size: cover;
-  // height: 100px;
   margin: 0;
   position: relative;
 }
@@ -18,26 +17,10 @@
   }
 }
 
-h1 {
-  text-align: center;
-  color: white;
-  margin: 0;
-  font-family: 'Noto Serif Display', serif;
-  padding-top: 180px;
-  font-weight: 400;
-  text-shadow: 2px 2px 3px black;
-}
-
 .heading {
   position: absolute;
   padding-left: 400px;
 }
-
-
-// .carousel-item img {
-//   background-color: rgba(0, 0, 0, 0.5);
-// }
-
 
 .how-it-works {
   text-align: center;
@@ -47,10 +30,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-h3 {
-  padding-bottom: 5px;
-  padding-top: 5px;
-}
 
 .cards {
   display: flex;
@@ -77,6 +56,12 @@ h3 {
  #main {
    font-size: 150px;
    text-align: center;
+   color: white;
+   margin: 0;
+   font-family: 'Noto Serif Display', serif;
+   padding-top: 180px;
+   font-weight: 400;
+   text-shadow: 2px 2px 3px black;
  }
 
  #second {
@@ -90,12 +75,15 @@ h3 {
    font-family: 'Noto Serif Display', serif;
  }
 
- h2, h3 {
+ .card-text {
   font-family: 'Noto Serif Display', serif;
+  padding-bottom: 5px;
+  padding-top: 5px;
  }
 
- h2 {
+ .works {
    padding-bottom: 20px;
    padding-top: 20px;
    font-size: 55px !important;
+   font-family: 'Noto Serif Display', serif;
  }
