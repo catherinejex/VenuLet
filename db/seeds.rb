@@ -7,13 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+# 30.times do
+#   user = User.new(email: "bob@bob.gmail")
+#   user.save
+# end
+
 30.times do
-  Venue.create(title: ['Cozy Chalet', 'Magnificent Castle', 'Stately Manor'].sample,
+  venue = Venue.new(title: ['Cozy Chalet', 'Magnificent Castle', 'Stately Manor'].sample,
               location: ['Vail, Colorado', 'Lyon, France', ].sample,
               description: ['Warm and cozy chalet, nice views, great for couples',
               'Splendid and spacious castle, very regal, great large parties',
               'Comfortable 19th century manor, fully furnished, perfect for weekend getaways'].sample,
-              rate: [250, 999, 499].sample, square_meters: [100, 250, 500].sample)
+              rate: [250, 999, 499].sample, square_meters: [100, 250, 500].sample,
+              user_id: 1)
+  venue.save
 end
 
 puts 'Seed finished'
