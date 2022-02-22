@@ -2,6 +2,71 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.card-venue {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-header {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.card-image {
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  margin: 0;
+}
+
+.btn.btn-light.btn-venue {
+  background-color: transparent;
+  opacity: 0.65;
+  transition-duration: 3s;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+
+
+  &:hover {
+    background-color: transparent;
+    opacity: 0.9;
+  }
+}
+
+.card-info {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-price {
+  margin-top: 8px;
+}
+
+.location-text {
+  font-size: 14.3px;
+  margin-bottom: 20px;
+}
+
+.venues-text {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 40px;
 }
 
 // Smallest device
@@ -14,14 +79,14 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
