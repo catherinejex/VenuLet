@@ -67,6 +67,7 @@ h3 {
   display: flex;
   justify-content: center;
   margin: 0;
+  font-family: 'Noto Serif Display', serif;
 }
 
 .card {
@@ -91,4 +92,14 @@ h3 {
 
  #second {
    font-size: 35px;
+ }
+
+ h2, h3 {
+  font-family: 'Noto Serif Display', serif;
+ }
+
+ h2 {
+   padding-bottom: 20px;
+   padding-top: 20px;
+   font-size: 55px !important;
  }
