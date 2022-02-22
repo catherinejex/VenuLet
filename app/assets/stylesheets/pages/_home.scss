@@ -1,1 +1,94 @@
 // Specific CSS for your home-page
+* {
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+#banner {
+  background-size: cover;
+  // height: 100px;
+  margin: 0;
+  position: relative;
+}
+
+.carousel-inner {
+  height: 650px;
+  img {
+    background-position: center bottom;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 0;
+  font-family: 'Noto Serif Display', serif;
+  padding-top: 180px;
+  font-weight: 400;
+  text-shadow: 2px 2px 3px black;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  margin: 0;
+  font-family: 'Noto Serif Display', serif;
+  text-shadow: 2px 2px 3px black;
+}
+
+.heading {
+  position: absolute;
+  padding-left: 400px;
+}
+
+
+// .carousel-item img {
+//   background-color: rgba(0, 0, 0, 0.5);
+// }
+
+
+.how-it-works {
+  text-align: center;
+  padding-top: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.card {
+  width: 450px;
+  box-shadow: 2px 2px 2px 2px rgb(182, 182, 182);
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15px;
+  padding: 10px 10px 10px;
+  font-family: 'Noto Serif Display', serif;
+}
+
+.card img {
+  width: 100%
+}
+ #main {
+   font-size: 150px;
+   text-align: center;
+ }
+
+ #second {
+   font-size: 35px;
+ }

@@ -15,7 +15,7 @@ class VenuesController < ApplicationController
     @venue = Venue.new(venue_params)
 
     if @venue.save
-      redirect_to # my venues, not all venues
+      redirect_to my_venues_path # not sure if this will work
     else
       render :new
     end
@@ -29,14 +29,14 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
     @venue.update(params)
 
-    redirect_to # my venues, not all venues nor show page
+    redirect_to my_venues_path
   end
 
   def destroy
     @venue = Venue.find(params[:id])
     @venue.destroy
 
-    redirect_to # my venues
+    redirect_to my_venues_path
   end
 
   private
