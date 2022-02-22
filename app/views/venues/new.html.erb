@@ -1,11 +1,15 @@
-<h1>New Venue</h1>
-<div class='container w-50'>
-  <%= simple_form_for @venue do |f| %>
-    <%= f.input :title, input_html: { type: 'text' }%>
-    <%= f.input :location, input_html: { type: 'text' }%>
-    <%= f.input :description, input_html: { type: 'text' } %>
-    <%= f.input :rate, input_html: { type: 'number' } %>
-    <%= f.input :square_meters, input_html: { type: 'number' } %>
-    <%= f.submit "Create Listing" %>
-  <% end %>
+<div class='page-container' style='background-image: url(<%= asset_path 'chambord.jpg' %>)'>
+  <div class='left-container'>
+    <h1 class='text-center mb-4'>New Venue</h1>
+    <div class='form-container'>
+      <%= simple_form_for @venue do |f| %>
+        <%= f.input :title %>
+        <%= f.input :location %>
+        <%= f.input :description %>
+        <%= f.input :rate %>
+        <%= f.input :square_meters, input_html: { id: 'sq_m' } %>
+        <%= f.submit "Create Listing", class:'submit-button' %>
+      <% end %>
+    </div>
+  </div>
 </div>
