@@ -1,2 +1,11 @@
 <h1>New Venue</h1>
-<%= simple_form_for @venue do |f| %>
+<div class='container w-50'>
+  <%= simple_form_for @venue do |f| %>
+    <%= f.input :title, input_html: { type: 'text' }%>
+    <%= f.input :location, input_html: { type: 'text' }%>
+    <%= f.input :description, input_html: { type: 'text' } %>
+    <%= f.input :rate, input_html: { type: 'number' } %>
+    <%= f.input :square_meters, input_html: { type: 'number' } %>
+    <%= f.submit "Create Listing" %>
+  <% end %>
+</div>
