@@ -1,13 +1,27 @@
-<div class="container venue">
+<div class="container">
   <h2>All venues</h2>
   <div class='cards'>
     <% @venues.each do |venue| %>
-      <div class="card-header">
-        <img src="https://images.unsplash.com/photo-1532568547949-a09f1afe4d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"/>
+    <div class="card-venue">
+      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1505159940484-eb2b9f2588e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')">
+        <button class="btn btn-light btn-venue">
+          <%= link_to "Book now", new_venue_path(@venue), :style=> 'color:black' %>
+        </button>
       </div>
       <div class="card-body">
-        <h2>Name</h2>
+        <div class="card-info">
+          <h2><%= venue.title %></h2>
+          <p><%= venue.location %></p>
+          <p><%= venue.description %></p>
+        </div>
+        <div class="card-price">
+          <p>£<%= venue.rate %> per day</p>
+          <button class="btn btn-secondary btn-venue">
+            <%= link_to "Book now", new_venue_path(@venue), :style=> 'color:white' %>
+          </button>
+        </div>
       </div>
+    </div>
     <% end %>
   </div>
 </div>
