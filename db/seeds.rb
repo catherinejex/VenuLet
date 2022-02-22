@@ -11,6 +11,11 @@
 #   user.save
 # end
 
+# 30.times do
+#   user = User.new(email: "bob@bob.gmail")
+#   user.save
+# end
+
 30.times do
   venue = Venue.new(title: ['Cozy Chalet', 'Magnificent Castle', 'Stately Manor'].sample,
               location: ['Vail, Colorado', 'Lyon, France', ].sample,

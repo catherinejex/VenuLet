@@ -1,0 +1,39 @@
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+// @media (min-width: 100px) {
+  .left-container {
+    // position: sticky;
+    height: 100vh;
+    width: 50vw;
+    background-color: white;
+    // padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+// }
+.form-container {
+  margin: 0 auto;
+  width: 75%;
+  // height: 90%;
+  input, textarea {
+    margin-bottom: 30px;
+    border: none;
+  }
+  #sq_m {
+    margin-bottom: 50px;
+  }
+}
+
+.submit-button {
+  padding: 12px 28px;
+  width: 100%;
+  background-color: rgb(73, 121, 62);
+  color: white;
+  border: none;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: rgb(156, 194, 156);
+  }
+}

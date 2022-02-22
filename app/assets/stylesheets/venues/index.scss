@@ -1,3 +1,5 @@
+@import "new";
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -22,12 +24,27 @@
   height: 250px;
   width: 100%;
   background-size: cover;
+  position: relative;
   margin: 0;
 }
 
 .btn.btn-light.btn-venue {
-  padding-right: 20px;
-  padding-bottom: 20px;
+  background-color: transparent;
+  opacity: 0.65;
+  transition-duration: 3s;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+
+
+  &:hover {
+    background-color: transparent;
+    opacity: 0.9;
+  }
+}
+
+.card-info {
+  margin-right: 10px;
 }
 
 a {
@@ -37,6 +54,21 @@ a {
 .card-body {
   display: flex;
   justify-content: space-between;
+}
+
+.card-price {
+  margin-top: 8px;
+}
+
+.location-text {
+  font-size: 14.3px;
+  margin-bottom: 20px;
+}
+
+.venues-text {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 40px;
 }
 
 // Smallest device
