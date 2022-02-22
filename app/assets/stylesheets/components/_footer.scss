@@ -12,14 +12,16 @@
 .footer-links {
   display: flex;
   align-items: center;
+  color: #1b4332 !important;
 }
 
 .footer-links a {
-  color: rgba(50, 93, 39, 0.8);
+  color: #1b4332 !important;
   opacity: 0.6;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+  transition: 0.4s;
 }
 
 .footer-links a:hover {
