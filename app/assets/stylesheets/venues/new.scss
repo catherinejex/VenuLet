@@ -3,21 +3,20 @@
   height: 100vh;
   background-size: cover;
 }
-
 // @media (min-width: 100px) {
   .left-container {
-    position: sticky;
+    // position: sticky;
     height: 100vh;
     width: 50vw;
     background-color: white;
-    padding: 20px;
+    // padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 // }
 .form-container {
   margin: 0 auto;
   width: 75%;
-  height: 90%;
+  // height: 90%;
   input, textarea {
     margin-bottom: 30px;
     border: none;
