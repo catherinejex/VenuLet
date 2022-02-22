@@ -15,7 +15,7 @@ class VenuesController < ApplicationController
     @venue = Venue.new(venue_params)
 
     if @venue.save
-      redirect_to # my venues, not all venues
+      redirect_to venues_path
     else
       render :new
     end
