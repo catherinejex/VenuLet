@@ -1,0 +1,31 @@
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  font-family: 'Noto Serif Display', serif;
+  border-bottom: 1px solid rgb(66, 99, 72);
+}
+.right-container h2 {
+  font-family: 'Noto Serif Display', serif;
+}
+.right-container {
+  height: 100vh;
+  width: 60vw;
+  background-color: white;
+  padding: 80px 40px 40px 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-bottom: 1px solid rgb(66, 99, 72);
+  float: right;
+}
+.submit-button {
+  padding: 12px 28px;
+  width: 100%;
+  background-color: rgb(73, 121, 62);
+  color: white;
+  border: none;
+  transition: 0.4s ease;
+  margin-bottom: 30px;
+  &:hover {
+    background-color: rgb(156, 194, 156);
+  }
+}
