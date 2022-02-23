@@ -2,7 +2,14 @@
   width: 100vw;
   height: 100vh;
   background-size: cover;
+  font-family: 'Noto Serif Display', serif;
+  border-bottom: 1px solid rgb(66, 99, 72);
 }
+
+.left-container h1 {
+  font-family: 'Noto Serif Display', serif;
+}
+
 // @media (min-width: 100px) {
   .left-container {
     height: 100vh;
@@ -10,6 +17,7 @@
     background-color: white;
     padding-top: 70px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom: 1px solid rgb(66, 99, 72);
   }
 // }
 .form-container {
