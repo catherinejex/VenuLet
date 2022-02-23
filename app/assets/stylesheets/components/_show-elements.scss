@@ -13,13 +13,14 @@
   border: 1px solid black;
 }
 #star {
-  color: rgb(187, 0, 0);
+  color: #1b4332;
   margin-left: 0;
   font-size: 20px;
 }
 #pin {
-  color: rgb(187, 0, 0);
+  color: #1b4332;
 }
+
 .host-user {
   font-family: 'Noto Serif Display', serif;
   margin: 0;
@@ -34,6 +35,11 @@
   margin-bottom: 0 !important;
 }
 .show {
+  font-family: 'Noto Serif Display', serif;
+  margin-bottom: 0 !important;
+}
+
+.title-host {
   font-family: 'Noto Serif Display', serif;
 }
 

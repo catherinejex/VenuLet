@@ -1,25 +1,18 @@
-<div class="image-box" > <%= image_tag @venue.image_url %></div>
+<div class="image-box"> <%= image_tag @venue.image_url %></div>
 <div class="d-flex" >
   <div style="width: 75%; margin-left:56px">
-    <h2 class="title">
+    <h2 class="title-host" style=" margin-top: 16px ; font-weight: bold ">
       <%= @venue.title %>  &nbsp |  <span style="font-size: 23px;"> <i id="pin" class="fa fa-map-pin"></i> <%= @venue.location %> </span>
       <span > <i id="star" class="fa fa-star"> 4.37 </i> </span>
     </h2>
 
 
-    <p class="host-user">Hosted by: user<%= @venue.user_id %></p>
-
+    <h5 class="host-user">Hosted by: user<%= @venue.user_id %></h5>
+    <p class="meter"><%= @venue.square_meters %> m²</p>
     <p class="price"> £<%= @venue.rate %> per day</p>
 
-    <p class="meter"><%= @venue.square_meters %> m²</p>
-
-
-
     <div class="line-divider"> </div>
-    <p style=" width: 100% ">Between Paul Doumer Square and Park Rivière, this beautiful 120 sqm architect style house, comprises, on the ground floor, a beautiful living room with its open plan kitchen and storage spaces.
-    On the 1st floor two bedrooms with their private shower rooms.
-    On the 2nd floor, a large parental area composed of a bedroom with bathroom and a bedroom with shower room.
-    Possibility to rent a parking space nearby</p>
+    <p style=" width: 100% "> <%= @venue.description %> </p>
   </div>
   <div style="width:25%; margin-right: 56px; margin-top: 16px "class="owner-info"></div>
 </div>
