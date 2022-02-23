@@ -22,11 +22,34 @@
 }
 
 .heading {
+  position: relative;
+  text-align: center;
+  top: 200px;
+}
+
+#main {
+  font-size: 150px;
+  color: white;
+  margin: 0;
+  font-family: 'Noto Serif Display', serif;
+  text-shadow: 2px 2px 3px black;
   position: absolute;
   text-align: center;
   position: relative;
 }
 
+#second {
+  text-shadow: 2px 2px 3px black;
+  font-size: 35px;
+  font-weight: 300;
+  font-style: italic;
+  position: absolute;
+  text-align: center;
+  position: relative;
+  color: white;
+  margin: 0;
+  font-family: 'Noto Serif Display', serif;
+}
 .how-it-works {
   text-align: center;
   padding-top: 20px;
@@ -44,7 +67,7 @@
 }
 
 .card {
-  box-shadow: 2px 2px 2px 2px rgb(182, 182, 182);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 15px;
   display: flex;
   flex-direction: column;
@@ -57,29 +80,6 @@
 .card img {
   width: 100%
 }
- #main {
-   font-size: 150px;
-   color: white;
-   margin: 0;
-   font-family: 'Noto Serif Display', serif;
-   text-shadow: 2px 2px 3px black;
-   position: absolute;
-   text-align: center;
-   position: relative;
- }
-
- #second {
-   text-shadow: 2px 2px 3px black;
-   font-size: 35px;
-   font-weight: 300;
-   font-style: italic;
-   position: absolute;
-   text-align: center;
-   position: relative;
-   color: white;
-   margin: 0;
-   font-family: 'Noto Serif Display', serif;
- }
 
  .card-text {
   font-family: 'Noto Serif Display', serif;
