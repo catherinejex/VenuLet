@@ -1,32 +1,31 @@
 <div class="image-box" > <%= image_tag @venue.image_url %></div>
+
 <div class="d-flex" >
   <div style="width: 75%; margin-left:56px">
-    <h2 style=" margin-top: 16px ; font-weight: bold ">
+    <h2 class="title-host" style=" margin-top: 16px ; font-weight: bold ">
       <%= @venue.title %>  &nbsp |  <span style="font-size: 23px;"> <i id="pin" class="fa fa-map-pin"></i> <%= @venue.location %> </span>
       <span > <i id="star" class="fa fa-star"> 4.37 </i> </span>
     </h2>
 
 
-    <h5 class="host-user">hosted by user<%= @venue.user_id %></h5>
-
+    <h5 class="host-user">Hosted by: user<%= @venue.user_id %></h5>
+    <p class="meter"><%= @venue.square_meters %> m²</p>
     <p class="price"> £<%= @venue.rate %> per day</p>
 
-    <p ><%= @venue.square_meters %>/m2</p>
-
-
-
     <div class="line-divider"> </div>
+
+
     <p style=" width: 100% "><%= @venue.description %></p>
+
   </div>
   <div style="width:25%; margin-right: 56px; margin-top: 16px "class="owner-info"></div>
 </div>
 
 <div>
-  <div class="line-divider" style="width: 75%; margin-left:56px"> </div>
-
+<%#
   <h3>You May Also Like</h3>
 
   <div class="extra-card"></div>
   <div class="extra-card"></div>
   <div class="extra-card"></div>
-</div>
+</div> %>
