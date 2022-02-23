@@ -5,25 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+  puts "deleting users"
+  User.delete_all
+  puts "deleting venues"
+  Venue.delete_all
+  puts "creating user"
+  hello = User.create( email:"hello@hello.com", password: "jkjjkljl")
+  puts "creating venues"
+  a= Venue.new(title:"16-Century Castle" ,location: "Fife, Scotland", description:"blah blah blah", rate:3500 ,square_meters:155521, user: hello)
+  b= Venue.new(title:"Private Island" ,location: "Rangyai, Thailand", description:"blah blah blah", rate:2500,square_meters:487,  user: hello)
+  c = Venue.new(title:"French Chataeu" ,location: "Bordeaux, France", description: "blah blah blah", rate:5000 ,square_meters:158,  user: hello)
+  d= Venue.new(title:"Luxury Hotel" ,location: "London, United Kingdom", description: "blah blah blah", rate:1800 ,square_meters:4800, user: hello)
+  e= Venue.new(title:"Island Beach" ,location: "Whitby, Turks and Caicos", description: "blah blah blah", rate:1500 ,square_meters:4800,  user: hello)
+  f= Venue.new(title:"Skyscraper" ,location:"New York, USA", description: "blah blah blah", rate:988 ,square_meters:4501,  user: hello)
+  g = Venue.new(title:"Desert Dunes" ,location:"Wadi-rum, Jordan", description: "blah blah blah", rate: 2000,square_meters:1000,  user: hello)
+  venues = [a,b,c,d,e,f,g]
+  venues.each do |venue|
+    venue.save!
+  end
 
-# 30.times do
-#   user = User.new(email: "bob@bob.gmail")
-#   user.save
-# end
 
-# 30.times do
-#   user = User.new(email: "bob@bob.gmail")
-#   user.save
-# end
 
-30.times do
-  venue = Venue.new(title: ['Cozy Chalet', 'Magnificent Castle', 'Stately Manor'].sample,
-              location: ['Vail, Colorado', 'Lyon, France', ].sample,
-              description: ['Warm and cozy chalet, nice views, great for couples',
-              'Splendid and spacious castle, very regal, great large parties',
-              'Comfortable 19th century manor, fully furnished, perfect for weekend getaways'].sample,
-              rate: [250, 999, 499].sample, square_meters: [100, 250, 500].sample,
-              user_id: 1)
-  venue.save
-end
 puts 'Seed finished'

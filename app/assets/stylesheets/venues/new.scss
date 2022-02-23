@@ -5,11 +5,10 @@
 }
 // @media (min-width: 100px) {
   .left-container {
-    // position: sticky;
     height: 100vh;
     width: 50vw;
     background-color: white;
-    // padding: 20px;
+    padding-top: 70px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 // }
@@ -23,6 +22,12 @@
   }
   #sq_m {
     margin-bottom: 50px;
+    width: 90%;
+    margin-right: 50px;
+  }
+  #image {
+    margin-bottom: 50px;
+    width: 100%;
   }
 }
 
