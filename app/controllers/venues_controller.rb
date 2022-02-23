@@ -15,7 +15,7 @@ class VenuesController < ApplicationController
     @venue = Venue.new(venue_params)
 
     if @venue.save
-      redirect_to my_venues_path # not sure if this will work
+      redirect_to my_venues_path(current_user) # not sure if this will work
     else
       render :new
     end
@@ -42,7 +42,7 @@ class VenuesController < ApplicationController
   private
 
   def venue_params
-    params.require(:venue).permit(:title, :location, :description, :rate, :square_meters)
+    params.require(:venue).permit(:title, :location, :description, :rate, :square_meters, :image)
   end
 
 end

@@ -1,0 +1,18 @@
+<div class='page-container' style='background-image: url(<%= asset_path 'chambord.jpg' %>)'>
+  <div class='left-container'>
+    <h1 class='text-center mb-4'>New Venue</h1>
+    <div class='form-container'>
+      <%= simple_form_for @venue do |f| %>
+        <%= f.input :title %>
+        <%= f.input :location %>
+        <%= f.input :description %>
+        <%= f.input :rate %>
+        <div class='d-flex justify-content-between'>
+          <%= f.input :square_meters, input_html: { id: 'sq_m' } %>
+          <%= f.input :image, as: :file, input_html: { id: 'image' } %>
+        </div>
+        <%= f.submit "Create Listing", class:'submit-button' %>
+      <% end %>
+    </div>
+  </div>
+</div>
