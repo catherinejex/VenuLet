@@ -1,7 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "Logo.png" %>
+    <div id="logo">
+      <%= image_tag "Untitled_Artwork.png" %>
+    </div>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +20,7 @@
             <%= link_to "Messages", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "kassra", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profile", "#", class: "dropdown-item" %>
               # <%= link_to "My Venues", my_venues_path(current_user), class: "dropdown-item" %>
