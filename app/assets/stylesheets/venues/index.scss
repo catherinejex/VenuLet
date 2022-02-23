@@ -6,6 +6,7 @@
   grid-gap: 16px;
   margin-bottom: 30px;
   margin-top: 20px;
+  font-family: 'Noto Serif Display', serif;
 }
 
 .card-venue {
@@ -43,8 +44,9 @@
   }
 }
 
-.card-info {
+.card-info h3 {
   margin-right: 10px;
+  font-family: 'Noto Serif Display', serif;
 }
 
 a {
@@ -69,6 +71,7 @@ a {
   margin-top: 20px;
   margin-bottom: 30px;
   font-size: 40px;
+  font-family: 'Noto Serif Display', serif;
 }
 
 // Smallest device
