@@ -1,8 +1,8 @@
 <div class="container">
   <h2 class="venues-text">All venues</h2>
-  <div class='d-flex'>
-    <h2 style='margin-right: 20px; font-family: Noto Serif Display, serif; margin-top: 8px'>Filters</h2>
-    <%= form_tag venues_path, class: "filter-form", method: :get do %>
+  <div class='d-flex justify-content-between'>
+  <h2 style='margin-right: 20px; font-family: Noto Serif Display, serif; margin-top: 8px'>Filters</h2>
+  <%= form_tag venues_path, class: "filter-form", method: :get do %>
       <%= text_field_tag :location,
       params[:location],
       class: "filter-input",
