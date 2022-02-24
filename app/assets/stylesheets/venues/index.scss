@@ -104,14 +104,25 @@ a {
 
 .location-text {
   font-size: 14.3px;
-  margin-bottom: 20px;
+  margin-bottom: 46px;
 }
 
 .venues-text {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 30px;
-  font-size: 40px;
+  font-size: 50px;
   font-family: 'Noto Serif Display', serif;
+}
+
+.map-link {
+  position: relative;
+  bottom: 20px;
+  a {
+    color:#1b4332;
+    border: 0.5px solid #1b4332;
+    border-radius: 5px;
+    padding: 10px;
+  }
 }
 
 // Smallest device
