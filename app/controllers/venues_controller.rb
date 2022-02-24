@@ -2,17 +2,11 @@ class VenuesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-
-    # puts params
-    # all_params = [params[:location], params[:size], params[:rate]].join
-    if params[:location].present? && params[:size].present?
-      @venues = Venue.where(location: params[:location], rate: params[:rate])
-    else
-      @venues = Venue.all
-   end
-
-    puts params
-    
+    query = Venue.all
+    query = query.where("location ILIKE ?", "%#{params[:location]}") if params[:location].present?
+    query = query.where("square_meters >= ?", params[:square_meters]) if params[:square_meters].present?
+    query = query.where("rate <= ?", params[:rate]) if params[:rate].present?
+    @venues = query
 
     @markers = @venues.geocoded.map do |venue|
       {

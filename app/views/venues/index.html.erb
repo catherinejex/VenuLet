@@ -8,15 +8,15 @@
       class: "filter-input",
       placeholder: "Location"
       %>
-      <%= text_field_tag :size,
-      params[:size],
+      <%= text_field_tag :square_meters,
+      params[:square_meters],
       class: "filter-input",
-      placeholder: "Size in Square Meters"
+      placeholder: "Min size in Square Meters"
       %>
       <%= text_field_tag :rate,
       params[:rate],
       class: "filter-input",
-      placeholder: "Rate"
+      placeholder: "Max Rate Per Day"
       %>
     <%= submit_tag "Find My Venue!", class: "filter-submit-button" %>
     <% end %>
