@@ -9,15 +9,25 @@
       class: "filter-input",
       placeholder: "Location"
       %>
-      <%= text_field_tag :square_meters,
-      params[:square_meters],
+      <%= text_field_tag :min_size,
+      params[:min_size],
       class: "filter-input",
-      placeholder: "Min size in Square Meters"
+      placeholder: "Min Size Sq M"
       %>
-      <%= text_field_tag :rate,
-      params[:rate],
+      <%= text_field_tag :max_size,
+      params[:max_size],
       class: "filter-input",
-      placeholder: "Max Rate Per Day"
+      placeholder: "Max Size Sq M"
+      %>
+      <%= text_field_tag :min_price,
+      params[:min_price],
+      class: "filter-input",
+      placeholder: "Min Price"
+      %>
+      <%= text_field_tag :max_price,
+      params[:max_price],
+      class: "filter-input",
+      placeholder: "Max Price"
       %>
     <%= submit_tag "Find My Venue!", class: "filter-submit-button" %>
     <% end %>
