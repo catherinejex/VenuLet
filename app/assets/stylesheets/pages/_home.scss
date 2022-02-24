@@ -62,8 +62,12 @@
 .cards {
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: 0px;
   font-family: 'Noto Serif Display', serif;
+}
+
+.cards.home {
+  margin: 0 40px 50px 40px;
 }
 
 .card {
@@ -83,8 +87,8 @@
 
  .card-text {
   font-family: 'Noto Serif Display', serif;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-top: 15px;
  }
 
  .works {
