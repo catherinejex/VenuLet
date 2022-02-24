@@ -11,6 +11,7 @@ user1 = User.create( email:"hello@hello.com", password: "123456")
 user2 = User.create( email:"bob@hello.com", password: "123456")
 
 puts "creating venues"
+
 file = URI.open("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/icf3d9bcaa80b18bc/version/1587472380/best-castles-in-scotland.jpg")
 venue = Venue.new(title: "16-Century Castle", location: "Fife, Scotland", description: "Outstanding opportunity rent a 'B' listed Scottish castle hotel located within the popular town of Fife. A fantastic location for filming or grand weddings. The  Castle was built around 1500 as the home of the Bishops of Caithness. Bishop Robert Stewart gifted the castle to John Gordon, 11th Earl of Sutherland in 1557. In 1570 the castle was set alight in a feud between the McKays and Murrays. The rebuilding which followed included the addition of the upper part of the tower. The castle decayed during the 18th century but was restored in 1813–1814 to serve as a hunting lodge for visiting sportsmen. In 1947 it became a hotel.", rate:3500 ,square_meters:155521, user: user1)
 venue.photo.attach(io: file, filename:'nes.jpg', content_type: 'image/jpg')

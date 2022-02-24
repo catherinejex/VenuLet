@@ -1,6 +1,6 @@
 
 
-<div class='page-container' style='background-image: url(<%= asset_path 'event.jpeg' %>)'>
+<div class='page-container' style='background-image: url(<%= image_url "/assets/event.jpeg" %>)'>
   <div class='right-container'>
     <h2 class='text-center'>Log in</h2>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

@@ -1,0 +1,19 @@
+
+
+
+<div class="confirmation" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);">
+  <div class="container">
+    <h1 class="confirm-head">Congratulations</h1>
+    <p class="confirm-text">We'll see you on <%= @booking.start_date.strftime("%e %B %Y") %>! Thank you for booking <%= @booking.venue.title %> with VenuLet</p>
+  </div>
+</div>
+    <div class="card-confirm">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= @booking.venue.title %></h2>
+          <p><%= @booking.venue.description %></p>
+        </div>
+        <h2 class="card-trip-pricing">£<%= @booking.venue.rate %></h2>
+      </div>
+    </div>
