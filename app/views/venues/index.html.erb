@@ -12,7 +12,7 @@
         <div class="card-info">
           <h3><%= venue.title %></h3>
           <p class="location-text"><i class="fa fa-map-pin"></i> <%= venue.location %></p>
-          <p><%= venue.description %></p>
+          <p><%= venue.description.split('.')[0] %>...</p>
         </div>
         <div class="card-price">
           <p>£<%= venue.rate %>/day</p>
