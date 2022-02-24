@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<div class="image-box"> <%= image_tag @venue.image_url %></div>
-<div class="d-flex" >
-  <div style="width: 75%; margin-left:56px">
-    <h2 class="title-host" style=" margin-top: 16px ; font-weight: bold ">
-      <%= @venue.title %>  &nbsp |  <span style="font-size: 23px;"> <i id="pin" class="fa fa-map-pin"></i> <%= @venue.location %> </span>
-      <span > <i id="star" class="fa fa-star"> 4.37 </i> </span>
-    </h2>
-=======
 <div class="image-box" > <%= image_tag @venue.image_url %></div>
 
 <div class="container-md pt-3 pb-3">
@@ -16,17 +7,12 @@
       <h2 class="title-host" style=" margin-top: 16px ; font-weight: bold ">
         <%= @venue.title %>  &nbsp |  <span style="font-size: 23px;"> <i id="pin" class="fa fa-map-pin"></i> <%= @venue.location %> </span>
       </h2>
->>>>>>> 514c250c572a98259dbac14cd07f0a9f6f8d1808
 
 
       <h5 class="host-user">Hosted by: user<%= @venue.user_id %></h5>
       <p class="meter"><%= @venue.square_meters %> m²</p>
       <p class="price"> £<%= @venue.rate %> per day</p>
 
-<<<<<<< HEAD
-    <div class="line-divider"> </div>
-    <p style=" width: 100% "> <%= @venue.description %> </p>
-=======
       <div class="line-divider"> </div>
 
 
@@ -40,16 +26,7 @@
         <%= f.submit "Book now", class:'submit-button' %>
       <% end %>
     </div>
->>>>>>> 514c250c572a98259dbac14cd07f0a9f6f8d1808
   </div>
 </div>
 
-
 <div>
-<%#
-  <h3>You May Also Like</h3>
-
-  <div class="extra-card"></div>
-  <div class="extra-card"></div>
-  <div class="extra-card"></div>
-</div> %>

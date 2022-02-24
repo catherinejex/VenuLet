@@ -4,6 +4,10 @@
   overscroll-behavior: none;
 }
 
+.min-height {
+  min-height: calc(100vh - 100px);
+}
+
 #container {
   width: 100%;
 }
