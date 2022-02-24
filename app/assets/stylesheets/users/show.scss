@@ -1,0 +1,106 @@
+.tabs-underlined {
+  display: flex;
+  align-items: center;
+}
+
+.tabs-underlined .tab-underlined {
+  color: black;
+  padding: 8px;
+  margin: 8px;
+  opacity: .4;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+}
+
+.tabs-underlined .tab-underlined.active {
+  opacity: 1;
+  border-bottom: 3px solid #555555;
+}
+
+.tabs {
+  font-size: 24px;
+  margin: 10px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 90px;
+  margin-bottom: 50px;
+  font-family: 'Noto Serif Display', serif;
+}
+
+.profile-info h3{
+  font-family: 'Noto Serif Display', serif;
+}
+
+.left-profile-container {
+  width: 25%;
+  margin-right: 10px;
+}
+
+.right-profile-container {
+  border: #1b4332 0.5px solid;
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 75%;
+  height: 700px;
+  margin-left: 10px;
+}
+
+.profile-info {
+  align-items: center;
+  text-align: center;
+}
+
+.profile-info > img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-venue-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  margin: 20px;
+  height: 200px;
+  border-radius: 3px;
+}
+
+.card-venue-product img {
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
+}
+
+.card-venue-product h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Noto Serif Display', serif;
+
+}
+
+.card-venue-product p {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-venue-product .card-venue-product-infos {
+  padding: 16px;
+}
+
+.card-venue-product-infos {
+  font-family: 'Noto Serif Display', serif;
+}

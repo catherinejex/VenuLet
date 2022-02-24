@@ -1,1 +1,33 @@
-<h1>hello</h1>
+<div class="container">
+  <div class="profile-container">
+    <div class="left-profile-container">
+      <div class="profile-info">
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" alt="ford">
+        <h3>Ford Burgess</h3>
+        <p><%= @user.email %></p>
+      </div>
+    </div>
+
+    <div class="right-profile-container">
+      <div class="tabs">
+        <ul class="list-inline tabs-underlined">
+          <li>
+            <a href="#" class="tab-underlined active">My bookings</a>
+          </li>
+          <li>
+            <a href="#" class="tab-underlined">My venues</a>
+          </li>
+        </ul>
+      </div>
+      <div class="venue-cards">
+        <div class="card-venue-product">
+          <img src="https://media.istockphoto.com/photos/red-mars-like-landscape-in-wadi-rum-desert-jordan-this-location-was-picture-id1281287664?b=1&k=20&m=1281287664&s=170667a&w=0&h=JxOR3BtsiDiFwg96l1bVhhtFiMTIbiZ2fBOJut8PI-w=" />
+          <div class="card-venue-product-infos">
+            <h2>Venue name</h2>
+            <p>Venue description with <strong>relevant info</strong> only.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
