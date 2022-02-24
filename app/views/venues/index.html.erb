@@ -1,9 +1,30 @@
 <div class="container">
-  <h2 class="venues-text">All venues</h2>
+  <h2 class="venues-text">All venues</h2> <span><%= link_to 'View Map', map_venues_path %> </span>
+  <div class='d-flex justify-content-between'>
+  <h2 style='margin-right: 20px; font-family: Noto Serif Display, serif; margin-top: 8px'>Filters</h2>
+  <%= form_tag venues_path, class: "filter-form", method: :get do %>
+      <%= text_field_tag :location,
+      params[:location],
+      class: "filter-input",
+      placeholder: "Location"
+      %>
+      <%= text_field_tag :size,
+      params[:size],
+      class: "filter-input",
+      placeholder: "Size in Square Meters"
+      %>
+      <%= text_field_tag :rate,
+      params[:rate],
+      class: "filter-input",
+      placeholder: "Rate"
+      %>
+    <%= submit_tag "Find My Venue!", class: "filter-submit-button" %>
+    <% end %>
+  </div>
   <div class='cards'>
     <% @venues.each do |venue| %>
     <div class="card-venue">
-      <div class="card-image" style="background-image: url(<%= venue.image_url %>)">
+      <div class="card-image" style="background-image: url(<%= cl_image_path venue.photo.key %>)">
         <button class="btn btn-light btn-venue">
           <%= link_to "Book now", venue_path(venue), :style=> 'color:white' %>
         </button>
@@ -12,7 +33,7 @@
         <div class="card-info">
           <h3><%= venue.title %></h3>
           <p class="location-text"><i class="fa fa-map-pin"></i> <%= venue.location %></p>
-          <p><%= venue.description.split('.')[0] %>...</p>
+          <p><%= venue.description.split(' ')[0..20].join(" ") %>...</p>
         </div>
         <div class="card-price">
           <p>£<%= venue.rate %>/day</p>

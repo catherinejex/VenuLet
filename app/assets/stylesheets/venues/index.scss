@@ -1,5 +1,41 @@
 @import "new";
 
+.filter-form {
+  display: flex;
+  width: 100%;
+  input {
+    flex-grow: 1
+  }
+}
+.filter-input {
+  border: none;
+  background-color: rgb(238, 238, 238);
+  width: 20%;
+  margin-right: 10px;
+  padding: 12px 28px;
+}
+.filter-submit-button {
+  padding: 12px 28px;
+  // width: 100%;
+  background-color: rgb(73, 121, 62);
+  color: white;
+  border: none;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: rgb(156, 194, 156);
+  }
+}
+.search-button {
+  width: 25%;
+  height: 50px;
+  background-color: rgb(73, 121, 62);
+  color: white;
+  border: none;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: rgb(156, 194, 156);
+  }
+}
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -8,7 +44,6 @@
   margin-top: 20px;
   font-family: 'Noto Serif Display', serif;
 }
-
 .card-venue {
   overflow: hidden;
   background: white;

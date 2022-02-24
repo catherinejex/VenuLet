@@ -9,7 +9,7 @@
         <%= f.input :rate %>
         <div class='d-flex justify-content-between'>
           <%= f.input :square_meters, input_html: { id: 'sq_m' } %>
-          <%= f.input :image, as: :file, input_html: { id: 'image' } %>
+          <%= f.input :photo, as: :file, input_html: { id: 'image_url' } %>
         </div>
         <%= f.submit "Create Listing", class:'submit-button' %>
       <% end %>
