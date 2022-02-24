@@ -8,12 +8,16 @@
   </div>
 </div>
     <div class="card-confirm">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <% if @booking.venue.photo.attached? %>
+        <%= cl_image_tag @booking.venue.photo.key %>
+        <% end %>
+    <div class="text-container">
       <div class="card-trip-infos">
         <div>
           <h2><%= @booking.venue.title %></h2>
           <p><%= @booking.venue.description %></p>
         </div>
-        <h2 class="card-trip-pricing">£<%= @booking.venue.rate %></h2>
+          <h2 class="card-trip-pricing">£<%= @booking.venue.rate %></h2>
+        </div>
       </div>
     </div>
