@@ -1,9 +1,6 @@
 require 'open-uri'
 
 puts "deleting users"
-Venue.delete_all
-
-puts "deleting venues"
 User.delete_all
 
 puts "creating user"

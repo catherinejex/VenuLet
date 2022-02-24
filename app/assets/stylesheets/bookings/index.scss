@@ -26,35 +26,42 @@
   font-weight: 300;
   font-style: italic;
 }
-///////////////////////////////////////
+
 .card-confirm {
+  display: flex;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 40px 40px 40px;
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 .card-confirm img {
   height: 300px;
   width: 100%;
   object-fit: cover;
+  padding: 0;
 }
 
 .card-confirm h2 {
-  font-size: 16px;
+  font-size: 25px;
   font-weight: bold;
   margin: 0;
+  font-family: 'Noto Serif Display', serif;
 }
 
 .card-confirm p {
-  font-size: 12px;
+  font-size: 20px;
   opacity: .7;
   margin: 0;
+  font-family: 'Noto Serif Display', serif;
 }
 
-.card-confirm .card-trip-infos {
+.card-trip-pricing {
+  font-family: 'Noto Serif Display', serif;
+  text-align: right;
+}
+
+.text-container {
   padding: 16px;
-}
-
-.card-confirm {
-  display: flex;
-  width: 100%;
 }
