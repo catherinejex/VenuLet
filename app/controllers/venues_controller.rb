@@ -3,7 +3,7 @@ class VenuesController < ApplicationController
 
   def index
     query = Venue.all
-    query = query.where("location ILIKE ?", "%#{params[:location]}") if params[:location].present?
+    query = query.where("location ILIKE ?", "%#{params[:location]}%") if params[:location].present?
     query = query.where("square_meters >= ?", params[:square_meters]) if params[:square_meters].present?
     query = query.where("rate <= ?", params[:rate]) if params[:rate].present?
     @venues = query
