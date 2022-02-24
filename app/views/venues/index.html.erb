@@ -1,5 +1,5 @@
 <div class="container">
-  <h2 class="venues-text">All venues</h2>
+  <h2 class="venues-text">All venues</h2> <span><%= link_to 'View Map', map_venues_path %> </span>
   <div class='cards'>
     <% @venues.each do |venue| %>
     <div class="card-venue">
@@ -12,7 +12,7 @@
         <div class="card-info">
           <h3><%= venue.title %></h3>
           <p class="location-text"><i class="fa fa-map-pin"></i> <%= venue.location %></p>
-          <p><%= venue.description.split('.')[0] %>...</p>
+          <p><%= venue.description.split(' ')[0..20].join(" ") %>...</p>
         </div>
         <div class="card-price">
           <p>£<%= venue.rate %>/day</p>
