@@ -1,7 +1,8 @@
 require 'open-uri'
 
 puts "deleting users"
-User.delete_all
+Venue.destroy_all
+User.destroy_all
 
 puts "creating user"
 user1 = User.create( email:"hello@hello.com", password: "123456")
