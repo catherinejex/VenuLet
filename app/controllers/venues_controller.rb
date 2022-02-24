@@ -1,6 +1,8 @@
 class VenuesController < ApplicationController
   def index
+    puts params
     @venues = Venue.all
+
   end
 
   def show

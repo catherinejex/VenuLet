@@ -1,10 +1,24 @@
 @import "new";
 
-.form-control {
-  width: 25%;
-  height: 50px;
-  margin-right: 10px;
+.filter-form {
+  display: flex;
+}
+.filter-input {
   border: none;
+  background-color: rgb(238, 238, 238);
+  width: 25%;
+  margin-right: 10px;
+}
+.filter-submit-button {
+  padding: 12px 28px;
+  width: 100%;
+  background-color: rgb(73, 121, 62);
+  color: white;
+  border: none;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: rgb(156, 194, 156);
+  }
 }
 .search-button {
   width: 25%;
