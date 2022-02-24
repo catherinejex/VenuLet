@@ -3,7 +3,7 @@
   <div class='cards'>
     <% @venues.each do |venue| %>
     <div class="card-venue">
-      <div class="card-image" style="background-image: url(<%= venue.image_url %>)">
+      <div class="card-image" style="background-image: url(<%= cl_image_path venue.photo.key %>)">
         <button class="btn btn-light btn-venue">
           <%= link_to "Book now", venue_path(venue), :style=> 'color:white' %>
         </button>
