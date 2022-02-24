@@ -2,22 +2,24 @@
   <h2 class="venues-text">All venues</h2>
   <div class='d-flex'>
     <h2 style='margin-right: 20px; font-family: Noto Serif Display, serif; margin-top: 8px'>Filters</h2>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Location"
-    %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Size"
-    %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Rate"
-    %>
-    <button type=submit class='search-button'>Find My Venue!</button>
+    <%= form_tag venues_path, class: "filter-form", method: :get do %>
+      <%= text_field_tag :location,
+      params[:location],
+      class: "filter-input",
+      placeholder: "Location"
+      %>
+      <%= text_field_tag :size,
+      params[:size],
+      class: "filter-input",
+      placeholder: "Size in Square Meters"
+      %>
+      <%= text_field_tag :rate,
+      params[:rate],
+      class: "filter-input",
+      placeholder: "Rate"
+      %>
+    <%= submit_tag "Find My Venue!", class: "filter-submit-button" %>
+    <% end %>
   </div>
   <div class='cards'>
     <% @venues.each do |venue| %>
