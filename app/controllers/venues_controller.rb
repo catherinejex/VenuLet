@@ -16,8 +16,6 @@ class VenuesController < ApplicationController
       }
     end
 
-
-
   end
 
   def show
