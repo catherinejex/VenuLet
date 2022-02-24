@@ -1,6 +1,7 @@
 require 'open-uri'
 
 puts "deleting users"
+
 Venue.delete_all
 User.delete_all
 

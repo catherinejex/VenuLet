@@ -12,3 +12,25 @@
   font-family: 'Cinzel decorative', serif;
   font-size: 22px;
 }
+
+.map-container {
+  position: relative;
+}
+
+.link {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid white;
+  top: 16px;
+  left: 16px;
+  border-radius: 4px;
+  padding: 6px 20px;
+  font-size: 20px;
+  background-color: #1b4332;
+  // box-shadow: 1px 1px 1px 1px rgb(117, 117, 117);
+}
+
+.link a {
+  color: white;
+  font-family: 'Noto Serif Display', serif;
+}
