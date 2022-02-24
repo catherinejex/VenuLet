@@ -1,10 +1,14 @@
 .owner-info{
-  border: 1px solid black;
+  border: 1px solid rgb(200, 200, 200);
   width: 50px;
   margin-left: 40px;
+  padding: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  padding-top: 20px;
 }
 .line-divider {
-  border: 0.5px solid black;
+  border: 0.4px solid black;
   margin-bottom: 20px;
 }
 .extra-card {
@@ -13,12 +17,13 @@
   border: 1px solid black;
 }
 #star {
-  color: #1b4332;
-  margin-left: 0;
-  font-size: 20px;
+  color: red;
+  margin-left: 340px;
+  font-size: 16px;
+
 }
 #pin {
-  color: #1b4332;
+  color: red;
 }
 
 .host-user {
@@ -33,6 +38,7 @@
 .price {
   font-family: 'Noto Serif Display', serif;
   margin-bottom: 0 !important;
+  padding-top: 10px;
 }
 .show {
   font-family: 'Noto Serif Display', serif;
@@ -49,7 +55,7 @@
   margin-bottom: 0 !important;
 }
 
-.title {
+.description {
   font-family: 'Noto Serif Display', serif;
-  font-size: 40px;
+  font-size: 18px;
 }

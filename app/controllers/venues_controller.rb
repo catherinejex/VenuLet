@@ -5,6 +5,7 @@ class VenuesController < ApplicationController
 
   def show
     @venue = Venue.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -40,7 +41,7 @@ class VenuesController < ApplicationController
   private
 
   def venue_params
-    params.require(:venue).permit(:title, :location, :description, :rate, :square_meters, :image)
+    params.require(:venue).permit(:title, :location, :description, :rate, :square_meters, :image_url)
   end
 
 end
