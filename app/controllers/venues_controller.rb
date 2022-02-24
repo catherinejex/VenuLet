@@ -17,10 +17,6 @@ class VenuesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { venue: venue } )
       }
     end
-<<<<<<< HEAD
-=======
-
->>>>>>> a1ec082cebbd1d760c0bfa55f838009c527b27fa
   end
 
   def show

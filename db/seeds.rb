@@ -2,9 +2,13 @@ require 'open-uri'
 
 puts "deleting users"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a1ec082cebbd1d760c0bfa55f838009c527b27fa
+=======
+
+>>>>>>> 9935d1400c375eeb11642dec5fcbd7917efa38bb
 Venue.delete_all
 User.delete_all
 
