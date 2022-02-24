@@ -6,17 +6,18 @@
     params[:query],
     class: "form-control",
     placeholder: "Location"
-  %>
-  <%= text_field_tag :query,
-  params[:query],
-  class: "form-control",
-  placeholder: "Size"
-%>
-<%= text_field_tag :query,
-params[:query],
-class: "form-control",
-placeholder: "Rate"
-%>
+    %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Size"
+    %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Rate"
+    %>
+    <button type=submit class='search-button'>Find My Venue!</button>
   </div>
   <div class='cards'>
     <% @venues.each do |venue| %>

@@ -1,9 +1,19 @@
 @import "new";
 
 .form-control {
-  width: 34%;
+  width: 25%;
   margin-right: 10px;
   border: none;
+}
+.search-button {
+  width: 25%;
+  background-color: rgb(73, 121, 62);
+  color: white;
+  border: none;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: rgb(156, 194, 156);
+  }
 }
 .cards {
   display: grid;
