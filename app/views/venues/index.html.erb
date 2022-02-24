@@ -1,5 +1,5 @@
 <div class="container">
-  <h2 class="venues-text">All venues</h2> <span><%= link_to 'View Map', map_venues_path %> </span>
+  <h2 class="venues-text">All venues</h2> <div class="map-button-index-page"><%= link_to 'Map', map_venues_path %> </div>
   <div class='d-flex justify-content-between'>
   <h2 style='margin-right: 20px; font-family: Noto Serif Display, serif; margin-top: 8px'>Filters</h2>
   <%= form_tag venues_path, class: "filter-form", method: :get do %>
