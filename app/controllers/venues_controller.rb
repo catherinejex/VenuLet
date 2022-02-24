@@ -5,6 +5,15 @@ class VenuesController < ApplicationController
     puts params
     @venues = Venue.all
 
+    @markers = @venues.geocoded.map do |venue|
+      {
+        lat: venue.latitude,
+        lng: venue.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { venue: venue } )
+      }
+    end
+
+
   end
 
   def show
@@ -44,6 +53,18 @@ class VenuesController < ApplicationController
     @venue.destroy
 
     redirect_to my_venues_path
+  end
+
+  def map
+    @venues = Venue.all
+
+    @markers = @venues.geocoded.map do |venue|
+      {
+        lat: venue.latitude,
+        lng: venue.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { venue: venue } )
+      }
+    end
   end
 
   private
