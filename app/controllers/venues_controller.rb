@@ -4,8 +4,10 @@ class VenuesController < ApplicationController
   def index
     query = Venue.all
     query = query.where("location ILIKE ?", "%#{params[:location]}%") if params[:location].present?
-    query = query.where("square_meters >= ?", params[:square_meters]) if params[:square_meters].present?
-    query = query.where("rate <= ?", params[:rate]) if params[:rate].present?
+    query = query.where("square_meters >= ?", params[:min_size]) if params[:min_size].present?
+    query = query.where("square_meters <= ?", params[:max_size]) if params[:max_size].present?
+    query = query.where("rate >= ?", params[:min_price]) if params[:min_price].present?
+    query = query.where("rate <= ?", params[:max_price]) if params[:max_price].present?
     @venues = query
 
     @markers = @venues.geocoded.map do |venue|
@@ -15,9 +17,6 @@ class VenuesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { venue: venue } )
       }
     end
-
-
-
   end
 
   def show

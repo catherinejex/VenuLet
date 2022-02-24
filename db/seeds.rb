@@ -1,6 +1,7 @@
 require 'open-uri'
 
 puts "deleting users"
+Venue.delete_all
 User.delete_all
 
 puts "creating user"
@@ -9,8 +10,43 @@ user2 = User.create( email:"bob@hello.com", password: "123456")
 
 puts "creating venues"
 
+file = URI.open("https://live.staticflickr.com/54/118385662_746a6ea310_b.jpg")
+venue = Venue.new(title: "Catherine's House", location: "Tuscaloosa, Alabama, USA", description: "Hang out with Catherine!", rate: 30, square_meters: 50, user: user2)
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open("http://twistedsifter.com/wp-content/uploads/2013/06/garden-behind-shop-cookie-factory-miyajima-island-japan.jpg")
+venue = Venue.new(title: "Lush Japanese Garden", location: "Kyoto, Japan", description: "Colorful and flourishing with life, this garden is perfect for intimate parties and celebrations. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam nulla non magna", rate: 600, square_meters: 400, user: user2)
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open('https://www.omnivagant.com/wp-content/uploads/2019/02/IMG_1975-1200x800.jpg')
+venue = Venue.new(title: "Pink Mosque", location: "Shiraz, Iran", description: "The most beautiful mosque in Iran, this mosque is perfect for any occasion, but it is most popular for filming movie scenes. Lorem Ipsum Sit dolor amet.", rate: 500, square_meters: 500, user: user2);
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open("https://wgme.com/resources/media2/16x9/full/1015/center/80/9cca0b3a-e0e1-4e3b-bdba-1c0196abebbb-large16x9_frat2.jpg")
+venue = Venue.new(title: "Dingy Frat House", location: "Austin, Texas, USA", description: "Excellent for ragers, if you can get past the sheer amount of broken folding tables and discarded beer cans, you'll find this place has quite a bit of charm.", rate: 60, square_meters: 200, user: user2);
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open("https://cdn0.hitched.co.uk/articles/images/3/5/4/4/img_24453/r10_2x_Gate-Street-barn-bdabfe1.jpg")
+venue = Venue.new(title: 'Beautifully Renovated Barn', location: "Shanghai, China", description: "Full of rustic, bucolic charm, this renovated barn has hosted many beautiful weddings and dances. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliqua", rate: 1000, square_meters: 120, user: user2);
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open("https://ca-times.brightspotcdn.com/dims4/default/672a70d/2147483647/strip/true/crop/2047x1151+0+0/resize/1486x836!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fa8%2Faf%2Fc7add2e04d0b970da27e51e73ffe%2Fla-art-show-floor-2021.jpg%20%28CREDIT_BIRDMAN%20PHOTOS%29.jpg")
+venue = Venue.new(title: "Well-lit and Spacious Gallery", location: "Seattle, Washington", description: "This gallery is perfect for any exhibition, from art to seminars. Staging and art display tools are available upon request. Lorem ipsum dolor sit amet, consectetur adipiscing elit", rate: 800, square_meters: 500, user: user2)
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open("https://images.squaremeal.co.uk/cloud/article/8649/images/best-rooftop-restaurants-london-boundary-rooftop-shoreditch_23072020032009.jpg?w=1000")
+venue = Venue.new(title: "Lovely Rooftop Garden", location: "London, UK", description:"Excellent views and lots of greenery, this rooftop garden is perfect for dinner celebrations and intimate parties. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam nulla non magna varius vestibulum eget interdum odio. Pellentesque vel nibh at arcu imperdiet dignissim.", rate: 400, square_meters: 150, user: user2)
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
 file = URI.open("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/icf3d9bcaa80b18bc/version/1587472380/best-castles-in-scotland.jpg")
-venue = Venue.new(title: "16-Century Castle", location: "Fife, Scotland", description: "Outstanding opportunity rent a 'B' listed Scottish castle hotel located within the popular town of Fife. A fantastic location for filming or grand weddings. The  Castle was built around 1500 as the home of the Bishops of Caithness. Bishop Robert Stewart gifted the castle to John Gordon, 11th Earl of Sutherland in 1557. In 1570 the castle was set alight in a feud between the McKays and Murrays. The rebuilding which followed included the addition of the upper part of the tower. The castle decayed during the 18th century but was restored in 1813–1814 to serve as a hunting lodge for visiting sportsmen. In 1947 it became a hotel.", rate:3500 ,square_meters:155521, user: user1)
+venue = Venue.new(title: "16th Century Castle", location: "Fife, Scotland", description: "Outstanding opportunity rent a 'B' listed Scottish castle hotel located within the popular town of Fife. A fantastic location for filming or grand weddings. The  Castle was built around 1500 as the home of the Bishops of Caithness. Bishop Robert Stewart gifted the castle to John Gordon, 11th Earl of Sutherland in 1557. In 1570 the castle was set alight in a feud between the McKays and Murrays. The rebuilding which followed included the addition of the upper part of the tower. The castle decayed during the 18th century but was restored in 1813–1814 to serve as a hunting lodge for visiting sportsmen. In 1947 it became a hotel.", rate:3500 ,square_meters:155521, user: user1)
 venue.photo.attach(io: file, filename:'nes.jpg', content_type: 'image/jpg')
 venue.save!
 
@@ -20,12 +56,12 @@ venue.photo.attach(io: file, filename:'nes.jpg', content_type: 'image/jpg')
 venue.save!
 
 file = URI.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/french-chateau-1525445279.jpg')
-venue = Venue.new(title: "French Chateau", location: "Bordeaux, France", description: "Very beautiful 18th century Chateau of around 950m2 on two levels with authentic patterned cement tiles and pretty parquet floors, plus the attic of around 90m2 to be completely converted. It offers an exceptional view on the Garonne, the Canal du Midi and on a wooded park of several hectares... The domain has, all around 11.5 hectares of meadows and woods and, on a very beautiful “terroir”, 7, 5 Ha of red and white vines (AOC Entre Deux Mers, Bordeaux Supérieur and Bordeaux), cultivated organically.", rate:5000 ,square_meters:950,  user: user1 )
+venue = Venue.new(title: "Spacious French Chateau", location: "Bordeaux, France", description: "Very beautiful 18th century Chateau of around 950m2 on two levels with authentic patterned cement tiles and pretty parquet floors, plus the attic of around 90m2 to be completely converted. It offers an exceptional view on the Garonne, the Canal du Midi and on a wooded park of several hectares... The domain has, all around 11.5 hectares of meadows and woods and, on a very beautiful “terroir”, 7, 5 Ha of red and white vines (AOC Entre Deux Mers, Bordeaux Supérieur and Bordeaux), cultivated organically.", rate:5000 ,square_meters:950,  user: user1 )
 venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 venue.save!
 
 file = URI.open('https://www.travelanddestinations.com/wp-content/uploads/2018/01/Stunning-luxury-hotels-in-London.jpg')
-venue = Venue.new(title: "Luxury Hotel", location: "London, United Kingdom", description: "Situated in the West End of London, just a few minutes walk to Covent Garden Piazza and Charing Cross station. The hotel is available for conferences, events, parties and weddings. The hotel features air-conditioned rooms with free WiFi. Popular points of interest nearby include Theatre Royal Drury Lane, Savoy Theatre and The National Gallery. Royal Opera House is 750 yards away.", rate:1800 ,square_meters:4800, user: user2)
+venue = Venue.new(title: "Luxury Hotel, Large Rooms", location: "London, United Kingdom", description: "Situated in the West End of London, just a few minutes walk to Covent Garden Piazza and Charing Cross station. The hotel is available for conferences, events, parties and weddings. The hotel features air-conditioned rooms with free WiFi. Popular points of interest nearby include Theatre Royal Drury Lane, Savoy Theatre and The National Gallery. Royal Opera House is 750 yards away.", rate:1800 ,square_meters:4800, user: user2)
 venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 venue.save!
 
