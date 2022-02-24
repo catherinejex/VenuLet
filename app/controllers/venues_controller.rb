@@ -2,8 +2,21 @@ class VenuesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-    puts params
-    @venues = Venue.all
+    query = Venue.all
+    query = query.where("location ILIKE ?", "%#{params[:location]}") if params[:location].present?
+    query = query.where("square_meters >= ?", params[:square_meters]) if params[:square_meters].present?
+    query = query.where("rate <= ?", params[:rate]) if params[:rate].present?
+    @venues = query
+
+    @markers = @venues.geocoded.map do |venue|
+      {
+        lat: venue.latitude,
+        lng: venue.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { venue: venue } )
+      }
+    end
+
+
 
   end
 
@@ -44,6 +57,18 @@ class VenuesController < ApplicationController
     @venue.destroy
 
     redirect_to my_venues_path
+  end
+
+  def map
+    @venues = Venue.all
+
+    @markers = @venues.geocoded.map do |venue|
+      {
+        lat: venue.latitude,
+        lng: venue.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { venue: venue } )
+      }
+    end
   end
 
   private

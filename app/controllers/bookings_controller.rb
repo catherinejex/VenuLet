@@ -8,11 +8,16 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @venue = Venue.find(params[:venue_id])
     @booking.venue = @venue
+    @booking.user = current_user
     if @booking.save
-      redirect_to venue_path(@venue)
+      redirect_to booking_path(@booking)
     else
-      render 'new'
+      render :show
     end
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
   end
 
   private

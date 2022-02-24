@@ -1,0 +1,60 @@
+.confirmation {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 500px;
+}
+
+.confirm-head {
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Noto Serif Display', serif;
+  padding-top: 53px;
+
+}
+
+.confirm-text {
+  color: white;
+  text-align: center;
+  font-family: 'Noto Serif Display', serif;
+  text-shadow: 2px 2px 3px black;
+  font-size: 23px;
+  font-weight: 300;
+  font-style: italic;
+}
+///////////////////////////////////////
+.card-confirm {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-confirm img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-confirm h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-confirm p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-confirm .card-trip-infos {
+  padding: 16px;
+}
+
+.card-confirm {
+  display: flex;
+  width: 100%;
+}
