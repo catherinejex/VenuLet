@@ -1,4 +1,6 @@
 class VenuesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+
   def index
     @venues = Venue.all
   end
@@ -14,9 +16,13 @@ class VenuesController < ApplicationController
 
   def create
     @venue = Venue.new(venue_params)
+    @venue.user = current_user
 
-    @venue.save
-    redirect_to venues_path(@venues)
+    if @venue.save
+      redirect_to venues_path(@venues)
+    else
+      render 'new'
+    end
 
   end
 
@@ -41,7 +47,7 @@ class VenuesController < ApplicationController
   private
 
   def venue_params
-    params.require(:venue).permit(:title, :location, :description, :rate, :square_meters, :image_url)
+    params.require(:venue).permit(:title, :location, :description, :rate, :square_meters, :image_url, :photo)
   end
 
 end
