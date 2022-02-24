@@ -2,8 +2,17 @@ class VenuesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
+
+    # puts params
+    # all_params = [params[:location], params[:size], params[:rate]].join
+    if params[:location].present? && params[:size].present?
+      @venues = Venue.where(location: params[:location], rate: params[:rate])
+    else
+      @venues = Venue.all
+   end
+
     puts params
-    @venues = Venue.all
+    
 
     @markers = @venues.geocoded.map do |venue|
       {
@@ -12,6 +21,7 @@ class VenuesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { venue: venue } )
       }
     end
+
 
 
   end
