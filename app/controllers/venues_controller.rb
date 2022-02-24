@@ -1,8 +1,12 @@
 class VenuesController < ApplicationController
   def index
-    puts params
-    @venues = Venue.all
-
+    # puts params
+    # all_params = [params[:location], params[:size], params[:rate]].join
+    if params[:location].present? && params[:size].present?
+      @venues = Venue.where(location: params[:location], rate: params[:rate])
+    else
+      @venues = Venue.all
+   end
   end
 
   def show
