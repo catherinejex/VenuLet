@@ -1,5 +1,8 @@
 class VenuesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+
   def index
+    puts params
     @venues = Venue.all
 
     @markers = @venues.geocoded.map do |venue|
@@ -9,6 +12,8 @@ class VenuesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { venue: venue } )
       }
     end
+
+
   end
 
   def show
@@ -22,9 +27,13 @@ class VenuesController < ApplicationController
 
   def create
     @venue = Venue.new(venue_params)
+    @venue.user = current_user
 
-    @venue.save
-    redirect_to venues_path(@venues)
+    if @venue.save
+      redirect_to venues_path(@venues)
+    else
+      render 'new'
+    end
 
   end
 
@@ -61,7 +70,7 @@ class VenuesController < ApplicationController
   private
 
   def venue_params
-    params.require(:venue).permit(:title, :location, :description, :rate, :square_meters, :image_url)
+    params.require(:venue).permit(:title, :location, :description, :rate, :square_meters, :image_url, :photo)
   end
 
 end
