@@ -6,10 +6,21 @@ Venue.delete_all
 User.delete_all
 
 puts "creating user"
-user1 = User.create( email:"hello@hello.com", password: "123456", name: "Kassra Mahsoori", avatar: "https://lastfm.freetls.fastly.net/i/u/300x300/ff6060a58b794c8ca57bb3f9a71c71ba.jpg")
-user2 = User.create( email:"bob@hello.com", password: "123456", name: "Ford Burgess", avatar: "https://res.cloudinary.com/ds6jhdll9/image/upload/v1645788355/development/brad_pitt_pebtis.jpg")
-user3 = User.create( email:"hell@hello.com", password: "123456", name: "Minja Slavkovic", avatar: "https://s.abcnews.com/images/International/dolphin-stock-gty-jef-180827_hpMain_4x5_608.jpg")
-user4 = User.create( email:"bo@hello.com", password: "123456", name: "Catherine Martin", avatar: "https://media.newyorker.com/photos/59097198019dfc3494ea2331/master/pass/Master.jpg")
+
+def  attach_photo(user, url)
+  file = URI.open(url)
+  user.photo.attach(io: file, filename: 'image.png', content_type: 'image/png')
+end
+
+user1 = User.create( email:"kassra@hello.com", password: "123456", name: "Kassra Mahsoori")
+user2 = User.create( email:"ford@hello.com", password: "123456", name: "Ford Burgess")
+user3 = User.create( email:"minja@hello.com", password: "123456", name: "Minja Slavkovic")
+user4 = User.create( email:"catherine@hello.com", password: "123456", name: "Catherine Martin")
+
+attach_photo(user1, "https://lastfm.freetls.fastly.net/i/u/300x300/ff6060a58b794c8ca57bb3f9a71c71ba.jpg" )
+attach_photo(user2, "https://res.cloudinary.com/ds6jhdll9/image/upload/v1645788355/development/brad_pitt_pebtis.jpg" )
+attach_photo(user3, "https://s.abcnews.com/images/International/dolphin-stock-gty-jef-180827_hpMain_4x5_608.jpg" )
+attach_photo(user4, "https://media.newyorker.com/photos/59097198019dfc3494ea2331/master/pass/Master.jpg" )
 
 users = [user1, user2, user3, user4]
 puts "creating venues"
