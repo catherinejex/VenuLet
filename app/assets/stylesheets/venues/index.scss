@@ -116,9 +116,7 @@ a {
 }
 
 .map-link {
-  position: relative;
-  bottom: 56px;
-  left: 73pc;
+
   a {
     color:white;
     background-color:#49793e;
@@ -126,6 +124,12 @@ a {
     border-radius: 5px;
     padding: 10px;
   }
+}
+
+.map-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 // Smallest device
