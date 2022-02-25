@@ -32,15 +32,19 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 40px 40px 40px;
+  width: 1000px;
   overflow: hidden;
   border-radius: 4px;
+  position: relative;
+  margin-left: 190px;
 }
 
 .card-confirm img {
   height: 300px;
-  width: 100%;
+  width: 400px;
   object-fit: cover;
   padding: 0;
+  align-self: flex-start;
 }
 
 .card-confirm h2 {
@@ -48,6 +52,7 @@
   font-weight: bold;
   margin: 0;
   font-family: 'Noto Serif Display', serif;
+  align-self: center;
 }
 
 .card-confirm p {
@@ -55,11 +60,15 @@
   opacity: .7;
   margin: 0;
   font-family: 'Noto Serif Display', serif;
+  align-self: center;
 }
 
 .card-trip-pricing {
   font-family: 'Noto Serif Display', serif;
-  text-align: right;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
 
 .text-container {
