@@ -51,6 +51,7 @@
                 <p><strong><em>Venue details:</em></strong></p>
                 <p><%= venue.description %>...</p>
                 <p>Rate: <%= venue.rate %>/day</p>
+                <%= link_to "Delete venue", venue_path(venue), method: :delete, data: { confirm: "Are you sure?"}, class:'btn btn-secondary delete-venue' %>
               </div>
             </div>
             <% end %>
