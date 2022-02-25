@@ -31,16 +31,20 @@
   display: flex;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 40px 40px 40px;
+  margin: 40px 40px 40px 40px;
+  width: 1000px;
   overflow: hidden;
   border-radius: 4px;
+  position: relative;
+  margin-left: 190px;
 }
 
 .card-confirm img {
   height: 300px;
-  width: 100%;
+  width: 400px;
   object-fit: cover;
   padding: 0;
+  align-self: flex-start;
 }
 
 .card-confirm h2 {
@@ -48,6 +52,7 @@
   font-weight: bold;
   margin: 0;
   font-family: 'Noto Serif Display', serif;
+  align-self: center;
 }
 
 .card-confirm p {
@@ -55,13 +60,34 @@
   opacity: .7;
   margin: 0;
   font-family: 'Noto Serif Display', serif;
+  align-self: center;
 }
 
 .card-trip-pricing {
   font-family: 'Noto Serif Display', serif;
-  text-align: right;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
 
 .text-container {
   padding: 16px;
+}
+.button-container {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 90vw;
+}
+.return-button {
+  padding: 15px 32px;
+  background-color: rgb(73, 121, 62);
+  color: white;
+  width: 48%;
+  transition: 0.4s ease;
+  text-align: center;
+  &:hover {
+    background-color: rgb(156, 194, 156);
+    color: white;
+  }
 }

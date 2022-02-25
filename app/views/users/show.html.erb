@@ -32,6 +32,11 @@
                 <p>Check-out: <%= booking.end_date.strftime("%e %B %Y") %> </p>
                 <p>Rate: <%= booking.venue.rate %>/day</p>
               </div>
+              <%= link_to "Cancel Booking",
+                booking_path(booking),
+                method: :delete,
+                data: { confirm: "Are you sure?" },
+                class: "cancel-booking" %>
             </div>
             <% end %>
           </div>
@@ -46,6 +51,7 @@
                 <p><strong><em>Venue details:</em></strong></p>
                 <p><%= venue.description %>...</p>
                 <p>Rate: <%= venue.rate %>/day</p>
+                <%= link_to "Delete venue", venue_path(venue), method: :delete, data: { confirm: "Are you sure?"}, class:'btn btn-secondary delete-venue' %>
               </div>
             </div>
             <% end %>

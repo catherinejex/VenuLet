@@ -25,7 +25,7 @@
 .profile-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 90px;
+  margin-top: 40px;
   margin-bottom: 50px;
   font-family: 'Noto Serif Display', serif;
 }
@@ -51,7 +51,7 @@
   border-right: 1px solid #dee2e6;
   border-bottom: 1px solid #dee2e6;
   border-left: 1px solid #dee2e6;
-  height: 900px;
+  height: 700px;
   padding-top: 30px;
   background-color: white;
 }
@@ -92,6 +92,7 @@
   margin: 0px 20px 20px 20px;
   height: 200px;
   border-radius: 3px;
+  position: relative;
 }
 
 .card-venue-product img {
@@ -121,4 +122,33 @@
 
 .card-venue-product-infos {
   font-family: 'Noto Serif Display', serif;
+}
+
+
+.delete-venue {
+   position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 8px 20px;
+  background-color: rgb(153, 13, 13);
+  color: white;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: rgb(194, 63, 63);
+    color: white;
+  }
+}
+
+.cancel-booking {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 8px 20px;
+  background-color: rgb(153, 13, 13);
+  color: white;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: rgb(194, 63, 63);
+    color: white;
+  }
 }
