@@ -31,12 +31,11 @@
   display: flex;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 40px 40px 40px 40px;
-  width: 1000px;
+  margin: 40px;
   overflow: hidden;
   border-radius: 4px;
   position: relative;
-  margin-left: 190px;
+  justify-content: center;
 }
 
 .card-confirm img {
@@ -74,11 +73,13 @@
 .text-container {
   padding: 16px;
 }
+
 .button-container {
   margin: 0 auto;
   margin-bottom: 40px;
-  width: 90vw;
+  margin: 40px;
 }
+
 .return-button {
   padding: 15px 32px;
   background-color: rgb(73, 121, 62);

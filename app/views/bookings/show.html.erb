@@ -7,11 +7,14 @@
     <p class="confirm-text">We'll see you on <%= @booking.start_date.strftime("%e %B %Y") %>! Thank you for booking <%= @booking.venue.title %> with VenuLet</p>
   </div>
 </div>
+
+<div class="container confirm">
+  <div class="card-confirm-container">
     <div class="card-confirm">
       <div class="card-photo">
         <% if @booking.venue.photo.attached? %>
           <%= cl_image_tag @booking.venue.photo.key %>
-          <% end %>
+        <% end %>
       </div>
       <div class="text-container">
         <div class="card-trip-infos">
@@ -23,7 +26,9 @@
         </div>
       </div>
     </div>
-    <div class='d-flex justify-content-between button-container'>
-      <%= link_to "All Venues", venues_path, class: "return-button" %>
-      <%= link_to "See My Bookings", user_path(current_user), class: "return-button" %>
-    </div>
+  </div>
+  <div class='d-flex justify-content-between button-container'>
+    <%= link_to "All Venues", venues_path, class: "return-button" %>
+    <%= link_to "See My Bookings", user_path(current_user), class: "return-button" %>
+  </div>
+</div>
