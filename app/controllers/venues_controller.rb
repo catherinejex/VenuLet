@@ -1,5 +1,5 @@
 class VenuesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, only: [ :index, :show, :map ]
 
   def index
     query = Venue.all
@@ -53,9 +53,10 @@ class VenuesController < ApplicationController
 
   def destroy
     @venue = Venue.find(params[:id])
+    @venue.user = current_user
     @venue.destroy
 
-    redirect_to my_venues_path
+    redirect_to user_path(current_user)
   end
 
   def map
