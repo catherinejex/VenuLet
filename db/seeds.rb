@@ -22,7 +22,7 @@ venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 venue.save!
 
 file = URI.open("https://cdn.thegentlemansjournal.com/wp-content/uploads/2017/05/party-1328x884-c-center.jpg")
-venue = Venue.new(title: 'Classy yacht', location: 'Nice, France', description: "Hold your event whilst gently cruising along the French Riviera! Perfect for any event, this yacht includes a fully serviced bar, and multiple lounges.", rate: 900, square_meters: 50, user: user2)
+venue = Venue.new(title: 'Classy Yacht', location: 'Nice, France', description: "Hold your event whilst gently cruising along the French Riviera! Perfect for any event, this yacht includes a fully serviced bar, and multiple lounges.", rate: 900, square_meters: 50, user: user2)
 venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 venue.save!
 
