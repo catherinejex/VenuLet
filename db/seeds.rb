@@ -1,14 +1,7 @@
 require 'open-uri'
 
 puts "deleting users"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> a1ec082cebbd1d760c0bfa55f838009c527b27fa
-=======
-
->>>>>>> 9935d1400c375eeb11642dec5fcbd7917efa38bb
 Venue.delete_all
 User.delete_all
 
@@ -18,8 +11,38 @@ user2 = User.create( email:"bob@hello.com", password: "123456")
 
 puts "creating venues"
 
-file = URI.open("https://live.staticflickr.com/54/118385662_746a6ea310_b.jpg")
-venue = Venue.new(title: "Catherine's House", location: "Tuscaloosa, Alabama, USA", description: "Hang out with Catherine!", rate: 30, square_meters: 50, user: user2)
+file = URI.open("https://www.1stdibs.com/introspective-magazine/wp-content/uploads/2014/08/Sinatra-House-Party_PSM.jpg")
+venue = Venue.new(title: "Frank Sinatra Palm Springs Home", location: "Palm Springs, USA", description: "Get your Rat Pack together for a cool time with all the hip cats. Sip scotch in the same swingin' pad as 'Ol Blue Eyes and his pallies, and have a ring-a-ding time.", rate: 69, square_meters: 150, user: user2)
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open("https://res.cloudinary.com/ds6jhdll9/image/upload/v1645746192/development/Screen_Shot_2022-02-24_at_11.42.34_PM_a3za5a.png")
+venue = Venue.new(title: "Ford's House", location: "London, UK", description: "Hang out with Ford!", rate: 'Free!', square_meters: 50, user: user2)
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open("https://cdn.thegentlemansjournal.com/wp-content/uploads/2017/05/party-1328x884-c-center.jpg")
+venue = Venue.new(title: 'Classy yacht', location: 'Nice, France', description: "Hold your event whilst gently cruising along the French Riviera! Perfect for any event, this yacht includes a fully serviced bar, and multiple lounges.", rate: 900, square_meters: 50, user: user2)
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open("https://mbmarcobeteta.com/wp-content/uploads/2020/02/La-Palapa-sunset-table.jpg")
+venue = Venue.new(title: "Ocean View Palapas", location: "Peurto Vallarta, Mexico", description: "The sound of the steady waves and the smell of salty air will enchant any event you wish to hold here. Imagine a nice dinner followed an ankle-deep stroll in the tide.", rate: 650, square_meters: 750, user: user2)
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open("https://www.cooperativa.cl/noticias/site/artic/20200611/imag/foto_0000000120200611171732.jpg")
+venue = Venue.new(title: "Chuck E. Cheese's", location: "Columbus, Ohio, USA", description: "With every surface coated in pizza grease from grubby 6-year-old fingers, this place is a paradise for the young at heart. Complete with uncanny animatronic band", rate: 100, square_meters: 100, user: user2)
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open("https://wp-media-partyslate.imgix.net/ANwedding_652-JPP-Studios.jpg?auto=compress%2Cformat&fit=scale&h=1366&ixlib=php-1.2.1&q=95&w=2048&wpsize=2k-single")
+venue = Venue.new(title: "Large, Industrial Loft", location: "Brooklyn, New York, USA", description: "Hip and trendy New York loft, provides excellent views of Brooklyn Bridge, great for business parties and dinners.", rate: 250, square_meters: 45, user: user2)
+venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+venue.save!
+
+file = URI.open("https://www.soul-source.co.uk/uploads-soul/monthly_2016_02/northern-soul-journey.jpg.9a42b0028cf66d9b6d19602e63f19a35.jpg")
+venue = Venue.new(title: "Gothic Church Turned Art Gallery", location: "Paris, France", description: "Beautifully maintained Gothic church, no longer occupied by a congregation, is now popular for hosting art exhibitions. A few renovations have been made to give a more modern aesthetic.", rate: 1200, square_meters: 400, user: user2)
 venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 venue.save!
 
@@ -44,7 +67,7 @@ venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 venue.save!
 
 file = URI.open("https://ca-times.brightspotcdn.com/dims4/default/672a70d/2147483647/strip/true/crop/2047x1151+0+0/resize/1486x836!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fa8%2Faf%2Fc7add2e04d0b970da27e51e73ffe%2Fla-art-show-floor-2021.jpg%20%28CREDIT_BIRDMAN%20PHOTOS%29.jpg")
-venue = Venue.new(title: "Well-lit and Spacious Gallery", location: "Seattle, Washington", description: "This gallery is perfect for any exhibition, from art to seminars. Staging and art display tools are available upon request. Lorem ipsum dolor sit amet, consectetur adipiscing elit", rate: 800, square_meters: 500, user: user2)
+venue = Venue.new(title: "Well-lit and Spacious Gallery", location: "Seattle, Washington, USA", description: "This gallery is perfect for any exhibition, from art to seminars. Staging and art display tools are available upon request. Lorem ipsum dolor sit amet, consectetur adipiscing elit", rate: 800, square_meters: 500, user: user2)
 venue.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 venue.save!
 

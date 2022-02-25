@@ -24,6 +24,7 @@
       class: "filter-input",
       placeholder: "Min Price"
       %>
+
       <%= text_field_tag :max_price,
       params[:max_price],
       class: "filter-input",
@@ -44,7 +45,7 @@
         <div class="card-info">
           <h3><%= venue.title %></h3>
           <p class="location-text"><i class="fa fa-map-pin"></i> <%= venue.location %></p>
-          <p><%= venue.description.split(' ')[0..20].join(" ") %>...</p>
+          <p style='margin-top: -20px'><%= venue.description.split(' ')[0..20].join(" ") %>...</p>
         </div>
         <div class="card-price">
           <p>£<%= venue.rate %>/day</p>
