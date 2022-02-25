@@ -92,6 +92,7 @@
   margin: 0px 20px 20px 20px;
   height: 200px;
   border-radius: 3px;
+  position: relative;
 }
 
 .card-venue-product img {
@@ -121,4 +122,17 @@
 
 .card-venue-product-infos {
   font-family: 'Noto Serif Display', serif;
+}
+.cancel-booking {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 8px 20px;
+  background-color: rgb(153, 13, 13);
+  color: white;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: rgb(194, 63, 63);
+    color: white;
+  }
 }
