@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    get 'venues', as: :my_venues
+  end
   root to: 'pages#home'
   resources :venues do
     resources :bookings, only: [:create, :new]

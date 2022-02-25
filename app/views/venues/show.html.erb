@@ -3,7 +3,7 @@
 <div class="container-md pt-3 pb-3">
 
   <div class="d-flex" >
-    <div style="width: 70%;">
+    <div style="width: 65%;">
       <h2 class="title-host" style=" margin-top: 16px ; font-weight: bold ">
         <%= @venue.title %>  &nbsp |  <span style="font-size: 23px;"> <i id="pin" class="fa fa-map-pin"></i> <%= @venue.location %> </span>
       </h2>
@@ -19,10 +19,12 @@
       <div class="description"><p style=" width: 100% "><%= @venue.description %></p></div>
 
     </div>
-    <div style="width:30%; margin-top: 16px "class="owner-info">
+    <div style="width:35%; margin-top: 16px "class="owner-info">
       <%= simple_form_for [@venue, @booking] do |f| %>
+        <br>
         <%= f.input :start_date %>
         <%= f.input :end_date %>
+        <br>
         <%= f.submit "Book now", class:'submit-button' %>
       <% end %>
     </div>

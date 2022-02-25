@@ -2,29 +2,53 @@
   <div class="profile-container">
     <div class="left-profile-container">
       <div class="profile-info">
-        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" alt="ford">
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60">
         <h3>Ford Burgess</h3>
         <p><%= @user.email %></p>
-      </div>
+       </div>
     </div>
 
     <div class="right-profile-container">
       <div class="tabs">
-        <ul class="list-inline tabs-underlined">
-          <li>
-            <a href="#" class="tab-underlined active">My bookings</a>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class='nav-item' role="presentation">
+            <button class="nav-link active" id="bookings-tab" data-bs-toggle="tab" data-bs-target="#bookings" type="button" role="tab" aria-controls="bookings" aria-selected="true">My bookings</button>
           </li>
-          <li>
-            <a href="#" class="tab-underlined">My venues</a>
+          <li class='nav-item' role="presentation">
+            <button class="nav-link" id="venues-tab" data-bs-toggle="tab" data-bs-target="#venues" type="button" role="tab" aria-controls="venues" aria-selected="false">My venues</button>
           </li>
         </ul>
       </div>
-      <div class="venue-cards">
-        <div class="card-venue-product">
-          <img src="https://media.istockphoto.com/photos/red-mars-like-landscape-in-wadi-rum-desert-jordan-this-location-was-picture-id1281287664?b=1&k=20&m=1281287664&s=170667a&w=0&h=JxOR3BtsiDiFwg96l1bVhhtFiMTIbiZ2fBOJut8PI-w=" />
-          <div class="card-venue-product-infos">
-            <h2>Venue name</h2>
-            <p>Venue description with <strong>relevant info</strong> only.</p>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
+          <div class="venue-cards">
+            <% @current_user.bookings.each do |booking| %>
+            <div class="card-venue-product">
+              <%= cl_image_tag booking.venue.photo.key %>
+              <div class="card-venue-product-infos">
+                <h2 class='pb-2 border-bottom'><%= booking.venue.title %></h2>
+                <p><strong><em>Booking details:</em></strong></p>
+                <p>Check-in: <%= booking.start_date.strftime("%e %B %Y") %> </p>
+                <p>Check-out: <%= booking.end_date.strftime("%e %B %Y") %> </p>
+                <p>Rate: <%= booking.venue.rate %>/day</p>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="venues" role="tabpanel" aria-labelledby="venues-tab">
+          <div class="venue-cards">
+            <% @current_user.venues.each do |venue| %>
+            <div class="card-venue-product">
+              <%= cl_image_tag venue.photo.key %>
+              <div class="card-venue-product-infos">
+                <h2 class='pb-2 border-bottom'><%= venue.title %></h2>
+                <p><strong><em>Venue details:</em></strong></p>
+                <p><%= venue.description %>...</p>
+                <p>Rate: <%= venue.rate %>/day</p>
+              </div>
+            </div>
+            <% end %>
           </div>
         </div>
       </div>

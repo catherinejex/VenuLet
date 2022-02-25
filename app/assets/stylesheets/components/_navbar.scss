@@ -16,15 +16,27 @@
   letter-spacing: 1.2px;
 }
 
-.nav-link {
-  color: white !important;
-}
-
 #logo img {
   width: 100px;
   color: white;
 }
 
+#navbarDropdown {
+  height: 40px;
+}
+
+.nav-item.item{
+  padding: 10px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-family: 'Work Sans', Helvetica, sans-serif;
+}
+
+.navbar-nav {
+  align-items: center;
+}
 // .navbar-lewagon-white {
 //   background-color: white;
 // }
