@@ -65,3 +65,18 @@
 .text-container {
   padding: 16px;
 }
+.button-container {
+  margin: 40px 40px 40px 40px;
+}
+.return-button {
+  padding: 15px 32px;
+  background-color: rgb(73, 121, 62);
+  color: white;
+  width: 48%;
+  transition: 0.4s ease;
+  text-align: center;
+  &:hover {
+    background-color: rgb(156, 194, 156);
+    color: white;
+  }
+}
