@@ -124,12 +124,22 @@
   font-family: 'Noto Serif Display', serif;
 }
 
-.bottom-container {
-  display: flex;
-  justify-content: space-between;
-}
 
 .delete-venue {
+   position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 8px 20px;
+  background-color: rgb(153, 13, 13);
+  color: white;
+  transition: 0.4s ease;
+  &:hover {
+    background-color: rgb(194, 63, 63);
+    color: white;
+  }
+}
+
+.cancel-booking {
   position: absolute;
   bottom: 15px;
   right: 15px;
