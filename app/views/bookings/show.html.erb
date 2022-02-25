@@ -8,15 +8,17 @@
   </div>
 </div>
     <div class="card-confirm">
-      <% if @booking.venue.photo.attached? %>
-        <%= cl_image_tag @booking.venue.photo.key %>
-        <% end %>
-    <div class="text-container">
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= @booking.venue.title %></h2>
-          <p><%= @booking.venue.description %></p>
-        </div>
+      <div class="card-photo">
+        <% if @booking.venue.photo.attached? %>
+          <%= cl_image_tag @booking.venue.photo.key %>
+          <% end %>
+      </div>
+      <div class="text-container">
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= @booking.venue.title %></h2>
+            <p><%= @booking.venue.description %></p>
+          </div>
           <h2 class="card-trip-pricing">£<%= @booking.venue.rate %></h2>
         </div>
       </div>
